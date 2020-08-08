@@ -1,57 +1,29 @@
-
-.discs {
-    position: relative;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-end;
-    margin: 10vmin auto 0;
-    width: 90vmin;
-    height: 35vmin;
-}
-
-
-form {
-    text-align: center;
-}
-
 .tower {
     position: absolute;
-    top: 0px;
-    border-radius: 1vmin;
+    border-radius: 10px;
     width: 30px;
     height: 300px;
-    background: linear-gradient(to right, #d7b889, #b27315, #966f33);
+    /* background: linear-gradient(to right, #d7b889, #b27315, #966f33); */
+    /* background: linear-gradient(to right, black,red,yellow); */
 }
 .a {
-    left: 80px;
+    background: linear-gradient(to right, green,green,green);
 }
 .b {
-    left: 280px;
+    background: linear-gradient(to right, red,red,red);
 }
 .c {
-    left:480px;
+    background: linear-gradient(to right, blue,blue,blue);
 }
-
-.bottom {
-    position: relative;
-    display: block;
-    margin: 60px 310px;
-    border-radius: 15px;
-    width: 50%;
-    height: 50px;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), transparent),
-    linear-gradient(#b27315, #966f33 13%, #faddb0 14.5%, #faddb0 27.5%, #966f33 29%, #966f33 42%, #faddb0 43.5%, #d7b889 56.5%, #966f33 58%, #966f33 71%, #d7b889 72.5%, #d7b889 85.5%, #966f33 87%, #b27315);
-}
-
 button {
     margin: 50px auto;
     border: none;
-    border-radius: 1vmin;
+    border-radius: 15px;
     width: 200px;
     height: 60px;
-    font-size: 4vmin;
+    font-size: 30px;
     color: rgba(0, 0, 0, 0.5);
-    background: linear-gradient(to right, #c39550, #966f33);
+    background: linear-gradient(to right, #c39550, #966f33,red,green,blue,#966f33, #c39550);
     outline: none;
     cursor: pointer;
     transition: background 0.3s;
@@ -62,11 +34,53 @@ button:hover {
 button:active {
     background: linear-gradient(to right, #cf9844, #9e6f29);
 }
-.disc-1
-{
-    background-color: hsl(0, 50%, 50%);
+.main{
+    display: flex;
+    flex: 3;
+    margin-top: 100px;   
+}
+
+.middle{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-bottom: 100px;
+}
+.middle > div{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height:300px;
+    width :200px;
+    margin-left: 100px;
+    position: relative;
+}
+.tower-base{
+    position: absolute;
+    width: 200px;
+    height: 10px;
+}
+
+#first-tower > .tower-base{
+    border-radius: 15px;
+    width: 60%;
     height: 20px;
-    width: 40px;
-    margin:10px;
-    z-index:0;
+    background: linear-gradient(to right, red, green,blue);
+    /* background: linear-gradient(to right, rgba(255, 255, 255, 0.3), transparent),linear-gradient(#b27315, #966f33 13%, #faddb0 14.5%, #faddb0 27.5%, #966f33 29%, #966f33 42%, #faddb0 43.5%, #d7b889 56.5%, #966f33 58%, #966f33 71%, #d7b889 72.5%, #d7b889 85.5%, #966f33 87%, #b27315); */
+
+}
+#second-tower > .tower-base{
+    border-radius: 15px;
+    width: 60%;
+    height: 20px;
+    background: linear-gradient(to right, blue, red,green);
+}
+#third-tower > .tower-base{
+    border-radius: 15px;
+    width: 60%;
+    height: 20px;
+    background: linear-gradient(to right, green, blue,red);
+}
+.gaming_option{
+    padding-left: 300px;
 }

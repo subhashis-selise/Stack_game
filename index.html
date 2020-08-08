@@ -3,23 +3,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript"  src="script.js" charset="utf-8"></script>
+    <script src="script.js" defer></script>
 </head>
     <body>
-        <form>
-            <div class="discs">
-                <div class="tower a"></div>
-                <div class="tower b"></div>
-                <div class="tower c"></div>
+        <div class="main">
+            <div class="middle">
+                <div id="first-tower">
+                    <div class="tower a" id="towerStick"></div>
+                    <div class="tower-base" id="towerBase"></div>
+                </div>
+                <div id="second-tower">
+                    <div class="tower b" id="towerStick1"></div>
+                    <div class="tower-base"id="towerBase1"></div>
+                </div>
+                <div id="third-tower">
+                    <div class="tower c" id="towerStick2"></div>
+                    <div class="tower-base" id="towerBase2"></div>
+                </div>
             </div>
-            <div class="bottom"></div>
-            <button type="reset">Score: 0/10</button>
+        </div>
+        <!-- <div class="bottom"></div> -->
+        <div class="gaming_option">
             <button type="reset">New Game</button>
-        </form>
+            <button type="reset">Score: 0/10</button>
+        </div>
+           
     </body>
 </html>
