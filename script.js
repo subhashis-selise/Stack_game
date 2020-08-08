@@ -1,33 +1,38 @@
-addDisk(250,52);
-function addDisk(xCoordinate,yCoordinate){
-    var randColor="green";
-    var cnt=0,id=1;
+addDisk(250, 52);
+// $(document).ready(function () {
+//     alert("jquery in js file");
+// });
+
+function addDisk(xCoordinate, yCoordinate) {
+    var randColor = "green";
+    var cnt = 0;
     var firstTower = document.getElementById('first-tower');
     var secondTower = document.getElementById('second-tower');
     var thirdTower = document.getElementById('third-tower');
-    for(var i=1;i<=3;i++){
+    for (var id = 1; id <= 3; id++) {
         var diskElement = makeDisk(xCoordinate - cnt, yCoordinate, randColor, id);
         console.log(diskElement);
         firstTower === null || firstTower === void 0 ? void 0 : firstTower.appendChild(diskElement);
-        cnt+=30;
+        cnt += 30;
     }
-    cnt=0,id=2;
-    randColor="red";
-    for(var i=1;i<=3;i++){
+    cnt = 0;
+    randColor = "red";
+    for (var id = 1; id <= 3; id++) {
         var diskElement = makeDisk(xCoordinate - cnt, yCoordinate, randColor, id);
         console.log(diskElement);
         secondTower === null || secondTower === void 0 ? void 0 : secondTower.appendChild(diskElement);
-        cnt+=30;
+        cnt += 30;
     }
-    cnt=0,id=3;
-    randColor="blue";
-    for(var i=1;i<=3;i++){
+    cnt = 0;
+    randColor = "blue";
+    for (var id = 1; id <= 3; id++) {
         var diskElement = makeDisk(xCoordinate - cnt, yCoordinate, randColor, id);
         console.log(diskElement);
         thirdTower === null || thirdTower === void 0 ? void 0 : thirdTower.appendChild(diskElement);
-        cnt+=30;
+        cnt += 30;
     }
 }
+
 function makeDisk(lastPositionX, lastPositionY, diskColor, id) {
     var diskElement = document.createElement("div");
     diskElement.style.top = lastPositionX + 'px';
