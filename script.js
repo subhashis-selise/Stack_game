@@ -1,7 +1,11 @@
-addDisk(250, 52);
-// $(document).ready(function () {
-//     alert("jquery in js file");
-// });
+var SELECT_DRAGGABLE = ".draggable";
+
+$(document).ready(function () {
+    addDisk(250, 52);
+    initDrag();
+    initDrop();
+});
+
 
 function addDisk(xCoordinate, yCoordinate) {
     var randColor = "green";
@@ -44,5 +48,22 @@ function makeDisk(lastPositionX, lastPositionY, diskColor, id) {
     diskElement.style.position = 'absolute';
     diskElement.style.zIndex = '100';
     diskElement.id = 'temp' + diskColor + id;
+    diskElement.className = 'draggable' + ' ' + diskElement.id
     return diskElement;
+}
+
+
+function initDrag() {
+    $(SELECT_DRAGGABLE).draggable({
+        revert: "invalid",
+        stack: $(SELECT_DRAGGABLE),
+        cursor: "move",
+        addClasses: "false"
+    });
+}
+
+function initDrop() {
+    $(".droppable").droppable({
+        accept: SELECT_DRAGGABLE,
+    });
 }
