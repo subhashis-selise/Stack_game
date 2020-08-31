@@ -294,7 +294,7 @@ $(function () {
 });
 
 const clock = new clockTimer();
-addingDiskRandomly(251, 52);
+
 (id_value = document.getElementById('btn')) === null || id_value === void 0 ? void 0 : id_value.addEventListener('click', function () {
     $('#move').text("0");
     numberOfMoves = 0;
