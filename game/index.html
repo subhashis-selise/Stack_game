@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Game</title>
+    <link rel="stylesheet" href="style.css" />
+    
+</head>
+<body>
+
+  
+    <div class="gameBoard">
+        <div class="discription">
+            
+            <div id="dialog">
+                <div class="wining-msg">
+                    <h4>Success!! You win</h4>
+                </div>
+                <div class="losing-msg">
+                    <h4>Game Over!! Please Try Again</h4>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="middle">
+                <div id="first-tower">
+                    <div class="tower-stick" id="pollStick"></div>
+                    <div class="tower-base" id="pollBase"></div>
+                </div>
+                <div id="second-tower">
+                    <div class="tower-stick" id="pollStick1"></div>
+                    <div class=" tower-base"id="pollBase1"></div>
+                </div>
+                <div id="third-tower">
+                    <div class="tower-stick" id="pollStick2"></div>
+                    <div class="tower-base" id="pollBase2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="side">
+            <table>
+                <tr>
+                    
+                    <td> <button class="btn" id="btn">Start Game</button></td>
+                </tr>
+                <tr>
+                    <td>Move Count</td>
+                    <td> <p id="move">0</p></td>
+                </tr>
+                <tr>
+                    <td>Time left</td>
+                    <td id="timer"> </td>
+                </tr>
+               
+            </table>
+        </div>
+    </div>
+    
+   
+    <script type="text/javascript" src="src/jquery.min.js"></script>
+    <script type="text/javascript" src="src/jquery-ui.min.js"></script>
+        <script src="js/game.js"></script>
+</body>
+</html>
